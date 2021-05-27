@@ -1,0 +1,179 @@
+/* lay out css */
+// layout 공통
+#wrap{
+  width: $siteWidth;
+  margin: 0 auto;
+  #header{
+    position: relative;
+    height: 60px;
+    #top_logo{
+      float: left;
+      a{
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+    // top_menu 구현
+    #top_nav{
+      position: relative;
+      height: 60px;
+      float: right;
+      ul{
+        float: left;
+        li{
+          position: relative;
+          float: left;
+          margin-left: 30px;
+          &:nth-child(1){
+            margin-left: 0;
+          }
+          a{
+            line-height: 60px;
+            height: 60px;
+          }
+          &:hover{
+            .submenu{
+              visibility: visible;
+              opacity: 1;
+              top: 100%;
+            }
+          }
+          // sub menu 구현
+          .submenu{
+            position: absolute;
+            border: 1px solid $borderColorPrimary;
+            visibility: hidden;
+            opacity: 0;
+            top: calc(100% - 3px);
+            left: 0;
+            transition: 0.5s;
+            z-index: 10;
+            li{
+              width: 100%;
+              margin: 0;
+              background: white;
+              box-sizing: border-box;
+              padding: 0 10px;
+              min-width: 150px;
+              transition: .5s;
+              a{
+                line-height: 40px;
+                height: 40px;
+                text-transform: capitalize;
+              }
+              &:hover{
+                background: $gbtnColor;
+                a{
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 하단 영역
+  #footer{
+    margin-top: 50px;
+    // height: 80px;
+    // line-height: 80px;
+    // border-top: 1px solid $borderColorPrimary;
+    color: $fontColorPrimary;
+    font-size: 14px;
+    .footer_top{
+      padding: 60px 0 30px;
+    }
+    &>.footer_container{
+      padding: 30px 0;
+      text-align: center;
+    }
+    .footer_container{
+      width: $siteWidth;
+      margin: 0 auto;
+      .row{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .column{
+          flex: 25%;
+          box-sizing: border-box;
+          padding: 0 10px;
+          margin-bottom: 30px;
+          &.footer_logo{
+            flex: 140px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            h3{
+              font-size: 34px;
+              font-weight: 700;
+              line-height: 1;
+              margin: 0 0 20px 0;
+              padding: 2px 0 2px 0px;
+              letter-spacing: 3px;
+              text-transform: capitalize;
+            }
+          }
+          h4{
+            position: relative;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            /* h4:before,after common */
+            &:before,&:after{
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 3px;
+            }
+            &:before{
+              right: 0;
+              background: $borderColor;
+            }
+            &:after{
+              width: 60px;
+              background: $borderColorPrimary;
+            }
+          }
+          /* footer list style */
+          ul{
+            li{
+              border-bottom: 1px solid $borderColorPrimary;
+              padding: 10px 0;
+              &:nth-child(1){
+                padding-top: 0;
+              }
+              a{text-transform: capitalize;}
+            }
+          }
+          p{
+            line-height: 26px;
+          }
+          /* footer input style */
+          &.news{
+            input{
+              float: left;
+              &[type=search]{
+                border: 0;
+                padding: 6px 8px;
+                width: 65%;
+              }
+              &[type=submit]{
+                border: 0;
+                background: $gbtnColor;
+                padding: 6px 0;
+                width: 35%;
+                text-align: center;
+                color: #fff;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <meta name="description" content="gallery">
+    <link rel="stylesheet" href="../asset/css/swiper-bundle.css"/>
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <script type="text/javascript" defer src="../js/jquery.min.js"></script>
+    <script type="text/javascript" defer src="../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="subpage">
+    <div id="wrap">
+      <header id="header">
+        <!-- 헤더 영역 -->
+        <h1 id="top_logo"><a href="../index.html">Xwood</a></h1>
+        <nav id="top_nav">
+          <ul>
+            <li>
+              <a href="../company/introduce.html">Company</a>
+              <ul class="submenu">
+                <li><a href="../company/introduce.html">Introduce</a></li>
+                <li><a href="../company/ci.html">CI</a></li>
+                <li><a href="../company/history.html">History</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../product/product.html">Product</a>
+            </li>
+            <li>
+              <a href="./gallery.html">Gallery</a>
+              <ul class="submenu">
+                <li><a href="./gallery.html">Gallery</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../community/notice.html">Community</a>
+              <ul class="submenu">
+                <li><a href="../community/notice.html">Notice</a></li>
+                <li><a href="../community/faq.html">FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../location/location.html">Location</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- 컨텐츠 영역 -->
+        <div class="container">
+          <!-- 왼쪽 메뉴 -->
+          <aside id="lnb">
+            <ul>
+              <li><a href="../gallery/gallery.html" class="on">Gallery</a></li>
+            </ul>
+          </aside>
+          <!-- 컨텐츠 본문 -->
+          <div class="contents">
+            <h2 class="subtitle">
+              <span>Gallery</span>
+            </h2>
+            <div class="inner">
+              <div class="box slider">
+                <div class="items">
+                  <div class="swiper-container slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery01.png" alt="gallery01">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery02.png" alt="gallery02">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery03.png" alt="gallery03">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery04.png" alt="gallery04">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery05.png" alt="gallery05">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery06.png" alt="gallery06">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../asset/img/gallery/gallery07.png" alt="gallery07">
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="footer_top">
+          <!-- footer 상단영역 -->
+          <div class="footer_container">
+            <div class="row">
+              <div class="column footer_logo">
+                <h3>logo</h3>
+              </div>
+              <div class="column">
+                <!-- site map -->
+                <h4>site map</h4>
+                <ul>
+                  <li>
+                    <a href="../company/introduce.html">Company</a>
+                  </li>
+                  <li>
+                    <a href="../product/product.html">Product</a>
+                  </li>
+                  <li>
+                    <a href="../gallery/gallery.html">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="../community/notice.html">Community</a>
+                  </li>
+                  <li>
+                    <a href="../location/location.html">Location</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>contact us</h4>
+                <p>
+                  A108 Adam Street<br>
+                  New York, NY 535022<br>
+                  United States<br>
+                  <strong>phone&nbsp;:&nbsp;</strong><a href="tel=+82-10-1234-5678">+82-10-1234-5678</a><br>
+                  <strong>E-mail&nbsp;:&nbsp;</strong><a href="mailto=mymail@gmail.com">mymail@gmail.com</a>
+                </p>
+              </div>
+              <div class="column news">
+                <!-- news -->
+                <h4>news</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                <form action="">
+                  <input type="search" name="search">
+                  <input type="submit" value="search">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_container">
+          <!-- footer 하단 영역 -->
+          <div class="copyright">
+            &copy;copyright all rights reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="mailto=maestoso911@naver.com">Jung</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".slider", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
