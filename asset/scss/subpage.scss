@@ -53,6 +53,9 @@ body.subpage{
       padding-top: 50px;
       border-top: 1px solid $borderColorPrimary;
       }
+      &.kakao_map{
+        margin-top: 20px;
+      }
       .box{
         flex-wrap: wrap;
       }
